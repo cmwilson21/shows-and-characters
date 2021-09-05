@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Character = () => {
+const CharacterList = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const Character = () => {
   )
 }
 
-export default Character
+export default CharacterList

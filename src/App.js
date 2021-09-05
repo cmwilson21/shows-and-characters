@@ -4,10 +4,13 @@ import './App.css';
 import Home from './components/Home';
 import NavBar from './components/NavBar';
 import ShowList from './components/ShowList'
+// import CharacterList from './components/CharacterList'
 import NewShow from './components/NewShow';
 import PageNotFound from './components/PageNotFound';
 
 function App() {
+
+
   return (
     <Router>
     <div className="App">

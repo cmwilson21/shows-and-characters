@@ -22,7 +22,19 @@ const ShowDetails = () => {
     return <h3>Imagning theme song playing...</h3>
   } else {
 
-    const characterCards = show.characters.map((character, index) => <CharacterCard key={index} character={character} show={show} />)
+    const removeCharacter = id => {
+      setShow({
+        ...show,
+        characters: show.characters.filter(character => character.id !== id)
+      })
+    }
+
+    const deleteCharacter = async id => {
+      await fetch(`http://localhost:9393/characters/${id}`, {method: "DELETE"})
+      removeCharacter(id);
+    }
+
+    const characterCards = show.characters.map((character, index) => <CharacterCard key={index} character={character} deleteCharacter={deleteCharacter} show={show} />)
 
 
     return (
